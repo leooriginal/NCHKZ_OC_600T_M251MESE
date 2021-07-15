@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.3.50</Version>
+    <SymbolConfigObject version="3.5.3.50" />
+    <ProjectInfo name="OC_600T_M251MESE_v3.2 (RU_EN)" devicename="MyController" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeUserDef name="T_BiMux_2" size="12" nativesize="12" typeclass="Userdef" iecname="BiMux_2">
+      <UserDefElement type="T_BOOL" iecname="i_x2ndSpd" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_x3rdSpd" byteoffset="5" />
+      <UserDefElement type="T_BOOL" iecname="i_x4thSpd" byteoffset="6" />
+      <UserDefElement type="T_WORD" iecname="q_wMux" byteoffset="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_LocRemSw" size="36" nativesize="36" typeclass="Userdef" iecname="LocRemSw">
+      <UserDefElement type="T_BOOL" iecname="i_xFwLoc" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xRevLoc" byteoffset="5" />
+      <UserDefElement type="T_BOOL" iecname="i_xFwRem" byteoffset="6" />
+      <UserDefElement type="T_BOOL" iecname="i_xRevRem" byteoffset="7" />
+      <UserDefElement type="T_BOOL" iecname="i_x2ndSpd" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="i_x3rdSpd" byteoffset="9" />
+      <UserDefElement type="T_BOOL" iecname="i_x4thSpd" byteoffset="10" />
+      <UserDefElement type="T_WORD" iecname="q_wDrvSpdSel" byteoffset="12" />
+      <UserDefElement type="T_BOOL" iecname="q_xDrvFwCmd" byteoffset="14" />
+      <UserDefElement type="T_BOOL" iecname="q_xDrvRevCmd" byteoffset="15" />
+      <UserDefElement type="T_BiMux_2" iecname="BM" byteoffset="16" />
+    </TypeUserDef>
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_LREAL" size="8" swapsize="8" typeclass="LReal" iecname="LREAL" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeUserDef name="T_CLE" size="24" nativesize="24" typeclass="Userdef" iecname="CLE">
+      <UserDefElement type="T_REAL" iecname="rCbleLenMin" byteoffset="0" />
+      <UserDefElement type="T_LREAL" iecname="rCalbCbleLen" byteoffset="8" />
+      <UserDefElement type="T_DINT" iecname="diCalbPulsVal" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T_R_TRIG" size="8" nativesize="8" typeclass="Userdef" iecname="R_TRIG">
+      <UserDefElement type="T_BOOL" iecname="CLK" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="5" />
+    </TypeUserDef>
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeUserDef name="T_CableLength_Enc_2" size="96" nativesize="96" typeclass="Userdef" iecname="CableLength_Enc_2">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xCalbMode" byteoffset="5" />
+      <UserDefElement type="T_WORD" iecname="i_wPulsEnc" byteoffset="6" />
+      <UserDefElement type="T_BOOL" iecname="i_xHighLim" byteoffset="8" />
+      <UserDefElement type="T_REAL" iecname="i_rLoadLen" byteoffset="12" />
+      <UserDefElement type="T_CLE" iecname="i_stCLE" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="40" />
+      <UserDefElement type="T_REAL" iecname="q_rLenActl" byteoffset="44" />
+      <UserDefElement type="T_DINT" iecname="q_diCalbPulsVal" byteoffset="48" />
+      <UserDefElement type="T_BOOL" iecname="q_xCalbDone" byteoffset="52" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="54" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="56" />
+      <UserDefElement type="T_DINT" iecname="diEncPos" byteoffset="60" />
+      <UserDefElement type="T_LREAL" iecname="lrPulsesPerMeter" byteoffset="64" />
+      <UserDefElement type="T_DINT" iecname="diCalbPulsVal" byteoffset="72" />
+      <UserDefElement type="T_R_TRIG" iecname="Stop_Forward_R_TRIG" byteoffset="76" />
+      <UserDefElement type="T_BOOL" iecname="xSystemReboot" byteoffset="84" />
+      <UserDefElement type="T_INT" iecname="iDelta" byteoffset="86" />
+      <UserDefElement type="T_WORD" iecname="wEncold" byteoffset="88" />
+      <UserDefElement type="T_BOOL" iecname="xInCalb" byteoffset="90" />
+    </TypeUserDef>
+    <TypeUserDef name="T_BiMux" size="8" nativesize="8" typeclass="Userdef" iecname="BiMux">
+      <UserDefElement type="T_BOOL" iecname="i_xBit0" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xBit1" byteoffset="5" />
+      <UserDefElement type="T_WORD" iecname="q_wMux" byteoffset="6" />
+    </TypeUserDef>
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeUserDef name="T_SYSTIMERTC_RTS_SYSTIMEDATE" size="18" nativesize="18" typeclass="Userdef" iecname="SYSTIMERTC.RTS_SYSTIMEDATE">
+      <UserDefElement type="T_UINT" iecname="wYear" byteoffset="0" />
+      <UserDefElement type="T_UINT" iecname="wMonth" byteoffset="2" />
+      <UserDefElement type="T_UINT" iecname="wDay" byteoffset="4" />
+      <UserDefElement type="T_UINT" iecname="wHour" byteoffset="6" />
+      <UserDefElement type="T_UINT" iecname="wMinute" byteoffset="8" />
+      <UserDefElement type="T_UINT" iecname="wSecond" byteoffset="10" />
+      <UserDefElement type="T_UINT" iecname="wMilliseconds" byteoffset="12" />
+      <UserDefElement type="T_UINT" iecname="wDayOfWeek" byteoffset="14" />
+      <UserDefElement type="T_UINT" iecname="wYday" byteoffset="16" />
+    </TypeUserDef>
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeUserDef name="T_PAS" size="44" nativesize="44" typeclass="Userdef" iecname="PAS">
+      <UserDefElement type="T_WORD" iecname="wDrvSpdRefMax" byteoffset="0" />
+      <UserDefElement type="T_REAL" iecname="rSpdLinMax" byteoffset="4" />
+      <UserDefElement type="T_WORD" iecname="wAswAccDsbl" byteoffset="8" />
+      <UserDefElement type="T_WORD" iecname="wAswDecDsbl" byteoffset="10" />
+      <UserDefElement type="T_WORD" iecname="wAswAccStrt" byteoffset="12" />
+      <UserDefElement type="T_WORD" iecname="wAswDecStrt" byteoffset="14" />
+      <UserDefElement type="T_WORD" iecname="wAswRampLim" byteoffset="16" />
+      <UserDefElement type="T_WORD" iecname="wDrvDecEmgy" byteoffset="18" />
+      <UserDefElement type="T_WORD" iecname="wBrakDly" byteoffset="20" />
+      <UserDefElement type="T_REAL" iecname="rCoefFrct" byteoffset="24" />
+      <UserDefElement type="T_REAL" iecname="rAswSpdStrt" byteoffset="28" />
+      <UserDefElement type="T_REAL" iecname="rAswSpdEnd" byteoffset="32" />
+      <UserDefElement type="T_WORD" iecname="wAswTimeEnd" byteoffset="36" />
+      <UserDefElement type="T_WORD" iecname="wSmplRate" byteoffset="38" />
+      <UserDefElement type="T_WORD" iecname="wCalcDistTime" byteoffset="40" />
+      <UserDefElement type="T_BOOL" iecname="xOptimRampDecEn" byteoffset="42" />
+    </TypeUserDef>
+    <TypeUserDef name="T_AntiSwayOpenLoop_2" size="1320" nativesize="1320" typeclass="Userdef" iecname="AntiSwayOpenLoop_2">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xInit" byteoffset="5" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvFwd" byteoffset="6" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvRev" byteoffset="7" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="i_xLsFwdStop" byteoffset="10" />
+      <UserDefElement type="T_BOOL" iecname="i_xLsRevStop" byteoffset="11" />
+      <UserDefElement type="T_BOOL" iecname="i_xLsFwdSlow" byteoffset="12" />
+      <UserDefElement type="T_BOOL" iecname="i_xLsRevSlow" byteoffset="13" />
+      <UserDefElement type="T_BOOL" iecname="i_xBrakFbck" byteoffset="14" />
+      <UserDefElement type="T_REAL" iecname="i_rCbleLenActl" byteoffset="16" />
+      <UserDefElement type="T_PAS" iecname="i_stPAS" byteoffset="20" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="64" />
+      <UserDefElement type="T_BOOL" iecname="q_xAswActv" byteoffset="65" />
+      <UserDefElement type="T_BOOL" iecname="q_xDrvFwd" byteoffset="66" />
+      <UserDefElement type="T_BOOL" iecname="q_xDrvRev" byteoffset="67" />
+      <UserDefElement type="T_WORD" iecname="q_wAswSpdRef" byteoffset="68" />
+      <UserDefElement type="T_INT" iecname="q_iAswSpdRef" byteoffset="70" />
+      <UserDefElement type="T_BOOL" iecname="q_xBrakCtrl" byteoffset="72" />
+      <UserDefElement type="T_REAL" iecname="q_rDistStop" byteoffset="76" />
+      <UserDefElement type="T_WORD" iecname="q_wStat" byteoffset="80" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="82" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="84" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SpeedSelect" size="52" nativesize="52" typeclass="Userdef" iecname="SpeedSelect">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvFwd" byteoffset="5" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvRev" byteoffset="6" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvFwdSlow" byteoffset="7" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvRevSlow" byteoffset="8" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdSel" byteoffset="10" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRefAna" byteoffset="12" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdLsp" byteoffset="14" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdHsp" byteoffset="16" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef1" byteoffset="18" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef2" byteoffset="20" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef3" byteoffset="22" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef4" byteoffset="24" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef5" byteoffset="26" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef6" byteoffset="28" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef7" byteoffset="30" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef8" byteoffset="32" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="34" />
+      <UserDefElement type="T_BOOL" iecname="q_xDrvFwd" byteoffset="35" />
+      <UserDefElement type="T_BOOL" iecname="q_xDrvRev" byteoffset="36" />
+      <UserDefElement type="T_WORD" iecname="q_wDrvSpdTarg" byteoffset="38" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="40" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="42" />
+      <UserDefElement type="T_WORD" iecname="wDrvSpdLspLast" byteoffset="46" />
+      <UserDefElement type="T_BOOL" iecname="xLspChange" byteoffset="48" />
+    </TypeUserDef>
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeUserDef name="T_TON" size="28" nativesize="28" typeclass="Userdef" iecname="TON">
+      <UserDefElement type="T_BOOL" iecname="IN" byteoffset="4" />
+      <UserDefElement type="T_TIME" iecname="PT" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="12" />
+      <UserDefElement type="T_TIME" iecname="ET" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ScaleInput" size="108" nativesize="108" typeclass="Userdef" iecname="ScaleInput">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xDevAlrm" byteoffset="5" />
+      <UserDefElement type="T_DINT" iecname="i_diDevIput" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="i_xSenSel" byteoffset="12" />
+      <UserDefElement type="T_WORD" iecname="i_wDevMaxThsh" byteoffset="14" />
+      <UserDefElement type="T_WORD" iecname="i_wDevMinThsh" byteoffset="16" />
+      <UserDefElement type="T_WORD" iecname="i_wMaxThshOput" byteoffset="18" />
+      <UserDefElement type="T_WORD" iecname="i_wMinThshOput" byteoffset="20" />
+      <UserDefElement type="T_WORD" iecname="i_wMaxThshIput" byteoffset="22" />
+      <UserDefElement type="T_WORD" iecname="i_wMinThshIput" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="26" />
+      <UserDefElement type="T_WORD" iecname="q_wScalOput" byteoffset="28" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="30" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="32" />
+      <UserDefElement type="T_BYTE" iecname="bCntr" byteoffset="34" />
+      <UserDefElement type="T_WORD" iecname="wScalVal" byteoffset="36" />
+      <UserDefElement type="T_REAL" iecname="rSlop" byteoffset="40" />
+      <UserDefElement type="T_REAL" iecname="rRawVal" byteoffset="44" />
+      <UserDefElement type="T_TON" iecname="TON_CNT" byteoffset="48" />
+      <UserDefElement type="T_DINT" iecname="diDevIputSave" byteoffset="76" />
+      <UserDefElement type="T_REAL" iecname="rDevMinThsh" byteoffset="80" />
+      <UserDefElement type="T_REAL" iecname="rDevMaxThsh" byteoffset="84" />
+      <UserDefElement type="T_REAL" iecname="rMinThshIput" byteoffset="88" />
+      <UserDefElement type="T_REAL" iecname="rMaxThshIput" byteoffset="92" />
+      <UserDefElement type="T_REAL" iecname="rMinThshOput" byteoffset="96" />
+      <UserDefElement type="T_REAL" iecname="rMaxThshOput" byteoffset="100" />
+    </TypeUserDef>
+    <TypeUserDef name="T_F_TRIG" size="8" nativesize="8" typeclass="Userdef" iecname="F_TRIG">
+      <UserDefElement type="T_BOOL" iecname="CLK" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="5" />
+    </TypeUserDef>
+    <TypeUserDef name="T_EventTime" size="40" nativesize="40" typeclass="Userdef" iecname="EventTime">
+      <UserDefElement type="T_BOOL" iecname="i_xEvent" byteoffset="4" />
+      <UserDefElement type="T_WORD" iecname="q_wHrs" byteoffset="6" />
+      <UserDefElement type="T_DWORD" iecname="q_dwMilSec" byteoffset="8" />
+      <UserDefElement type="T_DWORD" iecname="dwSysTime" byteoffset="12" />
+      <UserDefElement type="T_DWORD" iecname="dwPreScan" byteoffset="16" />
+      <UserDefElement type="T_DWORD" iecname="dwPLCScan" byteoffset="20" />
+      <UserDefElement type="T_BOOL" iecname="xPower" byteoffset="24" />
+      <UserDefElement type="T_R_TRIG" iecname="Event_Trig" byteoffset="28" />
+    </TypeUserDef>
+    <TypeUserDef name="T_StatisticDataStorage_2" size="136" nativesize="136" typeclass="Userdef" iecname="StatisticDataStorage_2">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xFwd" byteoffset="5" />
+      <UserDefElement type="T_BOOL" iecname="i_xRev" byteoffset="6" />
+      <UserDefElement type="T_BOOL" iecname="i_xRstOps" byteoffset="7" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="8" />
+      <UserDefElement type="T_WORD" iecname="wOpStat" byteoffset="10" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_Fwd" byteoffset="12" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_Rev" byteoffset="20" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_RstOp" byteoffset="28" />
+      <UserDefElement type="T_TON" iecname="TON_UP_DOWN" byteoffset="36" />
+      <UserDefElement type="T_BOOL" iecname="xPwrOn" byteoffset="64" />
+      <UserDefElement type="T_EventTime" iecname="EventTimer" byteoffset="68" />
+      <UserDefElement type="T_F_TRIG" iecname="F_Trig_OpHours" byteoffset="108" />
+      <UserDefElement type="T_BOOL" iecname="xFwd" byteoffset="116" />
+      <UserDefElement type="T_BOOL" iecname="xRev" byteoffset="117" />
+      <UserDefElement type="T_REAL" iecname="q_rOpHrs" byteoffset="120" />
+      <UserDefElement type="T_DWORD" iecname="q_dwOpNb" byteoffset="124" />
+      <UserDefElement type="T_DWORD" iecname="q_dwPlsNb" byteoffset="128" />
+      <UserDefElement type="T_DWORD" iecname="q_dwBtrkNb" byteoffset="132" />
+    </TypeUserDef>
+    <TypeUserDef name="T_OVLD" size="48" nativesize="48" typeclass="Userdef" iecname="OVLD">
+      <UserDefElement type="T_WORD" iecname="wSpdDbnd" byteoffset="0" />
+      <UserDefElement type="T_WORD" iecname="wTrqBndCnt" byteoffset="2" />
+      <UserDefElement type="T_WORD" iecname="wTrqBndWdth" byteoffset="4" />
+      <UserDefElement type="T_WORD" iecname="wSmple" byteoffset="6" />
+      <UserDefElement type="T_DWORD" iecname="dwLoadNom" byteoffset="8" />
+      <UserDefElement type="T_WORD" iecname="wMeasFreq" byteoffset="12" />
+      <UserDefElement type="T_WORD" iecname="wTrqThres" byteoffset="14" />
+      <UserDefElement type="T_WORD" iecname="wAntiTip" byteoffset="16" />
+      <UserDefElement type="T_WORD" iecname="wEncPuls" byteoffset="18" />
+      <UserDefElement type="T_WORD" iecname="wNoTrq" byteoffset="20" />
+      <UserDefElement type="T_REAL" iecname="rOvldThres" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="xEnLdCell" byteoffset="28" />
+      <UserDefElement type="T_REAL" iecname="rAcuWght" byteoffset="32" />
+      <UserDefElement type="T_WORD" iecname="wActWghtThres" byteoffset="36" />
+      <UserDefElement type="T_DWORD" iecname="dwCalbWght" byteoffset="40" />
+      <UserDefElement type="T_BOOL" iecname="xCalb" byteoffset="44" />
+      <UserDefElement type="T_BOOL" iecname="xOvld" byteoffset="45" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MDS" size="12" nativesize="12" typeclass="Userdef" iecname="MDS">
+      <UserDefElement type="T_BOOL" iecname="xLcEn" byteoffset="0" />
+      <UserDefElement type="T_WORD" iecname="wHstDrvOphrMax" byteoffset="2" />
+      <UserDefElement type="T_DWORD" iecname="dwCranLoadNom" byteoffset="4" />
+      <UserDefElement type="T_REAL" iecname="rTrqLoadNom" byteoffset="8" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__60__OF_BYTE" size="60" nativesize="60" typeclass="Array" iecname="ARRAY [1..60] OF BYTE" basetype="T_BYTE">
+      <ArrayDim minrange="1" maxrange="60" />
+    </TypeArray>
+    <TypeUserDef name="T_MaintenanceDataStorage_2" size="200" nativesize="200" typeclass="Userdef" iecname="MaintenanceDataStorage_2">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xFwd" byteoffset="5" />
+      <UserDefElement type="T_BOOL" iecname="i_xRev" byteoffset="6" />
+      <UserDefElement type="T_DINT" iecname="i_diCranLoadActl" byteoffset="8" />
+      <UserDefElement type="T_MDS" iecname="i_stMDS" byteoffset="12" />
+      <UserDefElement type="T_BOOL" iecname="i_xRst" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="25" />
+      <UserDefElement type="T_BOOL" iecname="q_xHrsPral" byteoffset="26" />
+      <UserDefElement type="T_BOOL" iecname="q_xHrsAlrm" byteoffset="27" />
+      <UserDefElement type="T_REAL" iecname="q_rHstDrvOphrRm" byteoffset="28" />
+      <UserDefElement type="T_REAL" iecname="q_rHstDrvOphrActl" byteoffset="32" />
+      <UserDefElement type="T_WORD" iecname="q_wHst300Ophr" byteoffset="36" />
+      <UserDefElement type="T_WORD" iecname="q_wHst600Ophr" byteoffset="38" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="40" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="42" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_Hoist" byteoffset="44" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_Reset" byteoffset="52" />
+      <UserDefElement type="T_BOOL" iecname="xPwrOn" byteoffset="60" />
+      <UserDefElement type="T_DWORD" iecname="dwSysTime" byteoffset="64" />
+      <UserDefElement type="T_DWORD" iecname="dwPreScan" byteoffset="68" />
+      <UserDefElement type="T_DWORD" iecname="dwPLCScan" byteoffset="72" />
+      <UserDefElement type="T_LREAL" iecname="rLoadCube" byteoffset="80" />
+      <UserDefElement type="T_WORD" iecname="wInvalidEntry" byteoffset="88" />
+      <UserDefElement type="T_WORD" iecname="wNoOfOps" byteoffset="90" />
+      <UserDefElement type="T_WORD" iecname="wAddup" byteoffset="92" />
+      <UserDefElement type="T_DWORD" iecname="dwPreScanRTC" byteoffset="96" />
+      <UserDefElement type="T_UDINT" iecname="pResult" byteoffset="100" />
+      <UserDefElement type="T_DWORD" iecname="dwActualTimeDelta" byteoffset="104" />
+      <UserDefElement type="T_BOOL" iecname="xFwd" byteoffset="108" />
+      <UserDefElement type="T_BOOL" iecname="xRev" byteoffset="109" />
+      <UserDefElement type="T_BYTE" iecname="bNoOfOps" byteoffset="111" />
+      <UserDefElement type="T_ARRAY__1__60__OF_BYTE" iecname="arOperationsStat" byteoffset="112" />
+      <UserDefElement type="T_WORD" iecname="wMinute" byteoffset="172" />
+      <UserDefElement type="T_LREAL" iecname="rHstDrvOphrActlFract" byteoffset="176" />
+      <UserDefElement type="T_LREAL" iecname="rHstDrvOphrActlWhole" byteoffset="184" />
+      <UserDefElement type="T_WORD" iecname="wHst300Ophr" byteoffset="192" />
+      <UserDefElement type="T_WORD" iecname="wHst600Ophr" byteoffset="194" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__49__OF_REAL" size="200" nativesize="200" typeclass="Array" iecname="ARRAY [0..49] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="0" maxrange="49" />
+    </TypeArray>
+    <TypeUserDef name="T_Overload_EN15011" size="472" nativesize="472" typeclass="Userdef" iecname="Overload_EN15011">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_REAL" iecname="i_rSenIputActl" byteoffset="8" />
+      <UserDefElement type="T_REAL" iecname="i_rDrvTrqMax" byteoffset="12" />
+      <UserDefElement type="T_INT" iecname="i_iDrvSpdActl" byteoffset="16" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef" byteoffset="18" />
+      <UserDefElement type="T_WORD" iecname="i_wEncPos" byteoffset="20" />
+      <UserDefElement type="T_OVLD" iecname="i_stOVLD" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="72" />
+      <UserDefElement type="T_BOOL" iecname="q_xOvldAlrm" byteoffset="73" />
+      <UserDefElement type="T_BOOL" iecname="q_xOvldWrn" byteoffset="74" />
+      <UserDefElement type="T_BOOL" iecname="q_xLampYell" byteoffset="75" />
+      <UserDefElement type="T_BOOL" iecname="q_xLampRed" byteoffset="76" />
+      <UserDefElement type="T_BOOL" iecname="q_xHorn" byteoffset="77" />
+      <UserDefElement type="T_WORD" iecname="q_wDrvSpdRef" byteoffset="78" />
+      <UserDefElement type="T_WORD" iecname="q_wActWght" byteoffset="80" />
+      <UserDefElement type="T_WORD" iecname="q_wStat" byteoffset="82" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="84" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="86" />
+      <UserDefElement type="T_WORD" iecname="wEncOld" byteoffset="88" />
+      <UserDefElement type="T_R_TRIG" iecname="Overtorque_Rtrig" byteoffset="92" />
+      <UserDefElement type="T_R_TRIG" iecname="Calb_Rtrig" byteoffset="100" />
+      <UserDefElement type="T_INT" iecname="iDelta" byteoffset="108" />
+      <UserDefElement type="T_BOOL" iecname="xOvld90Stat" byteoffset="110" />
+      <UserDefElement type="T_TON" iecname="BlinkTimerOff_TON" byteoffset="112" />
+      <UserDefElement type="T_TON" iecname="BlinkTimerOn_TON" byteoffset="140" />
+      <UserDefElement type="T_REAL" iecname="rDrvTrqActOld" byteoffset="168" />
+      <UserDefElement type="T_WORD" iecname="wBndHits" byteoffset="172" />
+      <UserDefElement type="T_ARRAY__0__49__OF_REAL" iecname="rTrqSampling" byteoffset="176" />
+      <UserDefElement type="T_REAL" iecname="rSum" byteoffset="376" />
+      <UserDefElement type="T_WORD" iecname="wAddup" byteoffset="380" />
+      <UserDefElement type="T_REAL" iecname="rActTrq" byteoffset="384" />
+      <UserDefElement type="T_WORD" iecname="wSampling" byteoffset="388" />
+      <UserDefElement type="T_BOOL" iecname="xTargSpdReached" byteoffset="390" />
+      <UserDefElement type="T_INT" iecname="iTrqScreening" byteoffset="392" />
+      <UserDefElement type="T_WORD" iecname="wStat" byteoffset="394" />
+      <UserDefElement type="T_REAL" iecname="rFactorhigh" byteoffset="396" />
+      <UserDefElement type="T_REAL" iecname="rFactorlow" byteoffset="400" />
+      <UserDefElement type="T_DINT" iecname="diAntiTip" byteoffset="404" />
+      <UserDefElement type="T_REAL" iecname="rDrvTrqMax" byteoffset="408" />
+      <UserDefElement type="T_EventTime" iecname="OvldTimer" byteoffset="412" />
+      <UserDefElement type="T_DINT" iecname="diOvldPos" byteoffset="456" />
+      <UserDefElement type="T_BOOL" iecname="xOvldStat" byteoffset="460" />
+      <UserDefElement type="T_REAL" iecname="rCalibTrqToWeigtRatio" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="xCalbDone" byteoffset="468" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SpeedOptRopeSlack" size="144" nativesize="144" typeclass="Userdef" iecname="SpeedOptRopeSlack">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_WORD" iecname="i_wMotCoef" byteoffset="6" />
+      <UserDefElement type="T_WORD" iecname="i_wGenCoef" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="i_iDrvSpdActl" byteoffset="10" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdHsp" byteoffset="12" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdNom" byteoffset="14" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdLsp" byteoffset="16" />
+      <UserDefElement type="T_INT" iecname="i_iDrvTrqActl" byteoffset="18" />
+      <UserDefElement type="T_WORD" iecname="i_wGenTrqTimeAvge" byteoffset="20" />
+      <UserDefElement type="T_WORD" iecname="i_wDrvSpdRef" byteoffset="22" />
+      <UserDefElement type="T_WORD" iecname="i_wHookTrqUp" byteoffset="24" />
+      <UserDefElement type="T_WORD" iecname="i_wHookTrqDown" byteoffset="26" />
+      <UserDefElement type="T_BOOL" iecname="i_xRst" byteoffset="28" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="29" />
+      <UserDefElement type="T_WORD" iecname="q_wDrvSpdTarg" byteoffset="30" />
+      <UserDefElement type="T_WORD" iecname="q_wDrvSpdTargMax" byteoffset="32" />
+      <UserDefElement type="T_BOOL" iecname="q_xTrqAlrt" byteoffset="34" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="35" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="36" />
+      <UserDefElement type="T_TON" iecname="TON_TrqAvg" byteoffset="40" />
+      <UserDefElement type="T_WORD" iecname="wPwrOptStat" byteoffset="68" />
+      <UserDefElement type="T_DWORD" iecname="dwPwrOptRef" byteoffset="72" />
+      <UserDefElement type="T_REAL" iecname="rTrqActAbs" byteoffset="76" />
+      <UserDefElement type="T_REAL" iecname="rTrqSum" byteoffset="80" />
+      <UserDefElement type="T_REAL" iecname="rCycles" byteoffset="84" />
+      <UserDefElement type="T_R_TRIG" iecname="Reset_R_TRIG" byteoffset="88" />
+      <UserDefElement type="T_R_TRIG" iecname="Fwd_R_TRIG" byteoffset="96" />
+      <UserDefElement type="T_F_TRIG" iecname="Fwd_F_TRIG" byteoffset="104" />
+      <UserDefElement type="T_R_TRIG" iecname="Rev_R_TRIG" byteoffset="112" />
+      <UserDefElement type="T_F_TRIG" iecname="Rev_F_TRIG" byteoffset="120" />
+      <UserDefElement type="T_REAL" iecname="rTrqSp" byteoffset="128" />
+      <UserDefElement type="T_BOOL" iecname="xFwd" byteoffset="132" />
+      <UserDefElement type="T_BOOL" iecname="xRev" byteoffset="133" />
+      <UserDefElement type="T_WORD" iecname="wActCoef" byteoffset="134" />
+      <UserDefElement type="T_WORD" iecname="wMotTrqTimeAvge" byteoffset="136" />
+      <UserDefElement type="T_WORD" iecname="wGenTrqTimeAvge" byteoffset="138" />
+    </TypeUserDef>
+    <TypeUserDef name="T_LoadOverspeedCtrl_2" size="152" nativesize="152" typeclass="Userdef" iecname="LoadOverspeedCtrl_2">
+      <UserDefElement type="T_BOOL" iecname="i_xEn" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="i_xDrvRunStat" byteoffset="5" />
+      <UserDefElement type="T_INT" iecname="i_iDrvSpdActl" byteoffset="6" />
+      <UserDefElement type="T_WORD" iecname="i_wPulsCntActl" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="i_iPulsPerRev" byteoffset="10" />
+      <UserDefElement type="T_REAL" iecname="i_rScalNum" byteoffset="12" />
+      <UserDefElement type="T_REAL" iecname="i_rScalDenom" byteoffset="16" />
+      <UserDefElement type="T_WORD" iecname="i_wSpdOvsp" byteoffset="20" />
+      <UserDefElement type="T_REAL" iecname="i_rRevoBrakWearMax" byteoffset="24" />
+      <UserDefElement type="T_WORD" iecname="i_wSpdCalcToler" byteoffset="28" />
+      <UserDefElement type="T_BOOL" iecname="i_xRst" byteoffset="30" />
+      <UserDefElement type="T_BOOL" iecname="q_xEn" byteoffset="31" />
+      <UserDefElement type="T_WORD" iecname="q_wMotSpd" byteoffset="32" />
+      <UserDefElement type="T_TIME" iecname="q_tOvspReactTime" byteoffset="36" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrmOvsp" byteoffset="40" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrmBkwr" byteoffset="41" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrmSenFbck" byteoffset="42" />
+      <UserDefElement type="T_BOOL" iecname="q_xAlrm" byteoffset="43" />
+      <UserDefElement type="T_WORD" iecname="q_wAlrmId" byteoffset="44" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_Rst" byteoffset="48" />
+      <UserDefElement type="T_R_TRIG" iecname="R_TRIG_RunStat" byteoffset="56" />
+      <UserDefElement type="T_F_TRIG" iecname="F_TRIG_RunStat" byteoffset="64" />
+      <UserDefElement type="T_TON" iecname="TON_SensorFbckLoss" byteoffset="72" />
+      <UserDefElement type="T_INT" iecname="iSumPulses" byteoffset="100" />
+      <UserDefElement type="T_DINT" iecname="diMeasTime" byteoffset="104" />
+      <UserDefElement type="T_REAL" iecname="rRevoBrakWear" byteoffset="108" />
+      <UserDefElement type="T_WORD" iecname="wPulsLast" byteoffset="112" />
+      <UserDefElement type="T_INT" iecname="iDelta" byteoffset="114" />
+      <UserDefElement type="T_REAL" iecname="rMeasTimeLowSpd" byteoffset="116" />
+      <UserDefElement type="T_DWORD" iecname="dwSysTimeMs" byteoffset="120" />
+      <UserDefElement type="T_DWORD" iecname="dwSysTimeMsOld" byteoffset="124" />
+      <UserDefElement type="T_WORD" iecname="wExecPeriod" byteoffset="128" />
+      <UserDefElement type="T_WORD" iecname="wExecPeriodOld" byteoffset="130" />
+      <UserDefElement type="T_REAL" iecname="rTwoCogwheelRevo" byteoffset="132" />
+      <UserDefElement type="T_REAL" iecname="rMotorRevo" byteoffset="136" />
+      <UserDefElement type="T_REAL" iecname="rMotorRevoAct" byteoffset="140" />
+      <UserDefElement type="T_DINT" iecname="diActualPules" byteoffset="144" />
+    </TypeUserDef>
+    <TypeSimple name="T_BIT_X_0" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="0" />
+    <TypeSimple name="T_BIT_X_1" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="1" />
+    <TypeSimple name="T_BIT_X_2" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="2" />
+    <TypeSimple name="T_BIT_X_3" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="3" />
+    <TypeSimple name="T_BIT_X_4" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="4" />
+    <TypeSimple name="T_BIT_X_5" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="5" />
+    <TypeSimple name="T_BIT_X_6" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="6" />
+    <TypeSimple name="T_BIT_X_7" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" bitoffset="7" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="APPLICATION_MASTTASK">
+        <Node name="CabLength" type="T_CableLength_Enc_2" access="ReadWrite" />
+        <Node name="Ctrl_DateTime" type="T_SYSTIMERTC_RTS_SYSTIMEDATE" access="ReadWrite" />
+        <Node name="LoadLength" type="T_BiMux" access="ReadWrite" />
+        <Node name="LocRemSw1" type="T_LocRemSw" access="ReadWrite" />
+        <Node name="LocRemSw2" type="T_LocRemSw" access="ReadWrite" />
+        <Node name="LocRemSw3" type="T_LocRemSw" access="ReadWrite" />
+        <Node name="LocRemSw4" type="T_LocRemSw" access="ReadWrite" />
+        <Node name="pResultRTC" type="T_UDINT" access="ReadWrite" />
+        <Node name="rSlwDistStop" type="T_REAL" access="ReadWrite" directaddress="%MB2" />
+        <Node name="rTranslationDistStop" type="T_REAL" access="ReadWrite" directaddress="%MB0" />
+        <Node name="rTrolleyDistStop" type="T_REAL" access="ReadWrite" directaddress="%MB1" />
+        <Node name="TtcToDate_Diag" type="T_UDINT" access="ReadWrite" />
+        <Node name="uiDay" type="T_UINT" access="ReadWrite" />
+        <Node name="uiHour" type="T_UINT" access="ReadWrite" />
+        <Node name="uiMinute" type="T_UINT" access="ReadWrite" />
+        <Node name="uiMonth" type="T_UINT" access="ReadWrite" />
+        <Node name="uiSecond" type="T_UINT" access="ReadWrite" />
+        <Node name="uiYear" type="T_UINT" access="ReadWrite" />
+        <Node name="xHMIReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="xInit" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRst" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL">
+        <Node name="diOsicoderOvspPos" type="T_UDINT" access="ReadWrite" />
+        <Node name="g_diCalbPulsVal" type="T_DINT" access="ReadWrite" />
+        <Node name="g_dwHstCalbWght" type="T_DWORD" access="ReadWrite" />
+        <Node name="g_dwHstLoadNom" type="T_DWORD" access="ReadWrite" />
+        <Node name="g_dwHstOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="g_dwSlwOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="g_dwTransOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="g_dwTrolOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="g_rActWeight" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rCalbCbleLen" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rCbleLenMin" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rDistMaxSlwFwd" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rDistMaxSlwRev" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rDistMaxTransFwd" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rDistMaxTransRev" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rDistMaxTrolFwd" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rDistMaxTrolRev" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstActlMass" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstDrv300OpHr" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstDrv600OpHr" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstDrvOphrActl" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstDrvOphrRm" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstDrvTrqMax" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstNomTrq" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rHstOvldThres" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLenAct" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLenConst" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLoadLength" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsSlowFwdSlwDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsSlowFwdTransDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsSlowFwdTrolDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsSlowRevSlwDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsSlowRevTransDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsSlowRevTrolDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsStopFwdSlwDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsStopFwdTransDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsStopFwdTrolDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsStopRevSlwDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsStopRevTransDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rLsStopRevTrolDist" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rOvspDenom" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rOvspNum" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rSlwCoefFrct" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rSlwOpHrs" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rSlwSpdLinMax" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rTransCoefFrct" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rTransOpHrs" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rTransSpdLinMax" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rTrolCoefFrct" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rTrolOpHrs" type="T_REAL" access="ReadWrite" />
+        <Node name="g_rTrolSpdLinMax" type="T_REAL" access="ReadWrite" />
+        <Node name="g_wCblLenAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wExeCntActl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstActWghtThres" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstAntiTip" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstEncPuls" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstFemHrs" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstGenCoef" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstGenTimeAvg" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstHookTrqDown" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstHookTrqUp" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstLsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstMaxThshIput" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstMaxThshOput" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstMdsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstMeasFreq" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstMinThshIput" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstMotCoef" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstNomSpd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstNoTrq" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstOvldAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSi1AlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSi2AlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSmple" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSorsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSpdDbnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstSsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstTrqBndCnt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstTrqBndWdth" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wHstTrqThres" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wLsModeSlw" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wLsModeTrans" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wLsModeTrol" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAccDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwASAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswAccStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswDecStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswRampLim" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswSmplRate" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswSpdEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswSpdStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwAswTimeEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwBrakDly" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwDecDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwDrvDecEmgy" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwSIAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wSlwSSAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAccDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransASAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswAccStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswDecStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswRampLim" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswSmplRate" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswSpdEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswSpdStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransAswTimeEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransBrakDly" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransDecDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransDrvDecEmgy" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransSIAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTransSSAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAccDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolASAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswAccStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswDecStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswRampLim" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswSmplRate" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswSpdEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswSpdStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolAswTimeEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolBrakDly" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolDecDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolDrvDecEmgy" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolSIAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="g_wTrolSSAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="g_xAppOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xAswEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xAswEnSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xAswEnTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xAswEnTrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xCableLengthCalb" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xCblLenAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xCblLenEnabled" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnCablLengthCalc" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnLOC" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnMDS" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnOvrldSt" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnSORS" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnSpdFollowSys" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnSpdFollowSysSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnSpdFollowSysTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xEnSpdFollowSysTrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstHrsAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstHrsPrAl" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstLcEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstOvld" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstOvldAlmGen" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstOvldCalb" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstOvldEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstOvldTst" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstOvldWrn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstRstMds" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xHstRstSds" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xLsPlausibilityOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xOvspdAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xSlwAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xSlwCalcDistEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xSlwSDAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xTransAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xTransCalcDistEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xTransSDAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xTrolAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xTrolCalcDistEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="g_xTrolSDAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="Hoist_In" type="T_WORD" access="ReadWrite" />
+        <Node name="Hoist_Puc" type="T_WORD" access="ReadWrite" />
+        <Node name="lq_xAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="lq_xAswActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="lq_xCalbActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="lq_xHorn" type="T_BOOL" access="ReadWrite" />
+        <Node name="lq_xOrangeLamp" type="T_BOOL" access="ReadWrite" />
+        <Node name="lq_xRedLamp" type="T_BOOL" access="ReadWrite" />
+        <Node name="xSafetyOverride" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="HOISTING_AXIS">
+        <Node name="HST_MDS" type="T_MaintenanceDataStorage_2" access="ReadWrite" />
+        <Node name="HST_OL1" type="T_Overload_EN15011" access="ReadWrite" />
+        <Node name="HST_OL2" type="T_Overload_EN15011" access="ReadWrite" />
+        <Node name="HST_SDS" type="T_StatisticDataStorage_2" access="ReadWrite" />
+        <Node name="HST_SI1" type="T_ScaleInput" access="ReadWrite" />
+        <Node name="HST_SI2" type="T_ScaleInput" access="ReadWrite" />
+        <Node name="HST_SORS" type="T_SpeedOptRopeSlack" access="ReadWrite" />
+        <Node name="HST_SS" type="T_SpeedSelect" access="ReadWrite" />
+        <Node name="i_diHstLcIput" type="T_DINT" access="ReadWrite" />
+        <Node name="i_dwHstLoadNom" type="T_DWORD" access="ReadWrite" />
+        <Node name="i_iHstAi" type="T_INT" access="ReadWrite" />
+        <Node name="i_rHstDrvNomTrqMds" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rHstDrvTrqMaxOvld" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rOvspDenom" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rOvspNum" type="T_REAL" access="ReadWrite" />
+        <Node name="i_stHstOVLD" type="T_OVLD" access="ReadWrite" />
+        <Node name="i_wDrvSpdSel" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstEncPos" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstFemHrs" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstGenCoef" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstHookTrqDown" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstHookTrqUp" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstMaxThshIput" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstMaxThshOput" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstMinThshIput" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstMotCoef" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstMstrGenTimeAvg" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstNomSpd" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wHstSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wOvspPulsCntActl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_xAppOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xEnLOC" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xEnSORS" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstFwdSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstFwdStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstLcEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstOvldEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstRevSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstRevStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstRst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstRstMds" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xHstRstSds" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xQckStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="LOC" type="T_LoadOverspeedCtrl_2" access="ReadWrite" />
+        <Node name="q_dwHstBtrkNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="q_dwHstOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="q_dwHstPlsNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="q_iActTrq" type="T_INT" access="ReadWrite" />
+        <Node name="q_iActualVelo" type="T_INT" access="ReadWrite" />
+        <Node name="q_rHstDrv300OpHr" type="T_WORD" access="ReadWrite" />
+        <Node name="q_rHstDrv600OpHr" type="T_WORD" access="ReadWrite" />
+        <Node name="q_rHstDrvOphrActl" type="T_REAL" access="ReadWrite" />
+        <Node name="q_rHstDrvOphrRm" type="T_REAL" access="ReadWrite" />
+        <Node name="q_wHstActlMass" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstMdsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstOvldAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstOvspAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstSi1AlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstSi2AlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstSorsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wHstSsAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wMotCur" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSpdRef" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wStatWr" type="T_WORD" access="ReadWrite" />
+        <Node name="q_xDrvFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstHorn" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstHrsAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstHrsPrAl" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstLampRed" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstLampYell" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstOverspeedAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstOvldAlmGen" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstOvldAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xHstOvldWarn" type="T_BOOL" access="ReadWrite" />
+        <Node name="rHstDrvActTrq" type="T_REAL" access="ReadWrite" />
+        <Node name="stHstOVLDLc" type="T_OVLD" access="ReadWrite" />
+        <Node name="stHstOVLDTrq" type="T_OVLD" access="ReadWrite" />
+        <Node name="wHstAlrm" type="T_WORD" access="ReadWrite" />
+      </Node>
+      <Node name="INTERLOCKS">
+        <Node name="i_xDoor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xDoor2" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xDoor3" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xDoor4" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwStopHst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwStopSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwStopTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwStopTrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL1Hst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL1Slw" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL1Trans" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL1Trol" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL2Hst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL2Slw" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL2Trans" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL2Trol" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL3Hst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL3Slw" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL3Trans" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xIL3Trol" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xPhaseCtr" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStopHst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStopSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStopTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStopTrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xStateKM1" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDoorsOpened" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xFault" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xFwStopHst" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xFwStopSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xFwStopTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xFwStopTrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xQckStpHst" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xQckStpSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xQckStpTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xQckStpTrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xRevStopHst" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xRevStopSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xRevStopTrans" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xRevStopTrol" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="IOCONFIG_GLOBALS_MAPPING">
+        <Node name="ai_wHoistLoadCel_" type="T_WORD" access="Read" directaddress="%IW154" />
+        <Node name="ai_wHstDrvSpdRefAna_" type="T_WORD" access="Read" directaddress="%IW139" />
+        <Node name="ai_wSlwDrvSpdRefAna_" type="T_WORD" access="Read" directaddress="%IW142" />
+        <Node name="ai_wTransDrvSpdRefAna_" type="T_WORD" access="Read" directaddress="%IW141" />
+        <Node name="ai_wTrolDrvSpdRefAna_" type="T_WORD" access="Read" directaddress="%IW140" />
+        <Node name="iwModule_2_IW0" type="T_WORD" access="Read" directaddress="%IW0" />
+        <Node name="iwModule_3_IW0" type="T_WORD" access="Read" directaddress="%IW1" />
+        <Node name="iwModule_4_IW0" type="T_WORD" access="Read" directaddress="%IW2" />
+        <Node name="li_wFwRvCmd" type="T_WORD" access="Read" directaddress="%IW138" />
+        <Node name="li_wLsStatus" type="T_WORD" access="Read" directaddress="%IW153" />
+        <Node name="li_x2ndSpdHst" type="T_BIT_X_2" access="Read" directaddress="%IX4.2" />
+        <Node name="li_x2ndSpdSlw" type="T_BIT_X_7" access="Read" directaddress="%IX4.7" />
+        <Node name="li_x2ndSpdTrans" type="T_BIT_X_7" access="Read" directaddress="%IX2.7" />
+        <Node name="li_x2ndSpdTrol" type="T_BIT_X_4" access="Read" directaddress="%IX3.4" />
+        <Node name="li_x3rdSpdHst" type="T_BIT_X_3" access="Read" directaddress="%IX4.3" />
+        <Node name="li_x3rdSpdSlw" type="T_BIT_X_0" access="Read" directaddress="%IX5.0" />
+        <Node name="li_x3rdSpdTrans" type="T_BIT_X_0" access="Read" directaddress="%IX3.0" />
+        <Node name="li_x3rdSpdTrol" type="T_BIT_X_5" access="Read" directaddress="%IX3.5" />
+        <Node name="li_x4thSpdHst" type="T_BIT_X_4" access="Read" directaddress="%IX4.4" />
+        <Node name="li_x4thSpdSlw" type="T_BIT_X_1" access="Read" directaddress="%IX5.1" />
+        <Node name="li_x4thSpdTrans" type="T_BIT_X_1" access="Read" directaddress="%IX3.1" />
+        <Node name="li_x4thSpdTrol" type="T_BIT_X_6" access="Read" directaddress="%IX3.6" />
+        <Node name="li_xEnSlwAxis" type="T_BIT_X_4" access="Read" directaddress="%IX2.4" />
+        <Node name="li_xFwRemHst" type="T_BIT_X_0" access="Read" directaddress="%IX4.0" />
+        <Node name="li_xFwRemSlw" type="T_BIT_X_5" access="Read" directaddress="%IX4.5" />
+        <Node name="li_xFwRemTrans" type="T_BIT_X_5" access="Read" directaddress="%IX2.5" />
+        <Node name="li_xFwRemTrol" type="T_BIT_X_2" access="Read" directaddress="%IX3.2" />
+        <Node name="li_xHorn" type="T_BIT_X_1" access="Read" directaddress="%IX2.1" />
+        <Node name="li_xILDoorsCE" type="T_BIT_X_2" access="Read" directaddress="%IX0.2" />
+        <Node name="li_xILDoorsCtB" type="T_BIT_X_3" access="Read" directaddress="%IX0.3" />
+        <Node name="li_xILDoorsDtC" type="T_BIT_X_4" access="Read" directaddress="%IX0.4" />
+        <Node name="li_xKeyEmgcStop" type="T_BIT_X_0" access="Read" directaddress="%IX2.0" />
+        <Node name="li_xLocalCtr" type="T_BIT_X_5" access="Read" directaddress="%IX0.5" />
+        <Node name="li_xLsFwTrans" type="T_BIT_X_0" access="Read" directaddress="%IX1.0" />
+        <Node name="li_xLsRevTrans" type="T_BIT_X_1" access="Read" directaddress="%IX1.1" />
+        <Node name="li_xPhaseCtr" type="T_BIT_X_0" access="Read" directaddress="%IX0.0" />
+        <Node name="li_xRemoteCtr" type="T_BIT_X_6" access="Read" directaddress="%IX0.6" />
+        <Node name="li_xRevRemHst" type="T_BIT_X_1" access="Read" directaddress="%IX4.1" />
+        <Node name="li_xRevRemSlw" type="T_BIT_X_6" access="Read" directaddress="%IX4.6" />
+        <Node name="li_xRevRemTrans" type="T_BIT_X_6" access="Read" directaddress="%IX2.6" />
+        <Node name="li_xRevRemTrol" type="T_BIT_X_3" access="Read" directaddress="%IX3.3" />
+        <Node name="li_xStart" type="T_BIT_X_2" access="Read" directaddress="%IX2.2" />
+        <Node name="li_xStateKM1" type="T_BIT_X_1" access="Read" directaddress="%IX0.1" />
+        <Node name="li_xStBrkTrans" type="T_BIT_X_3" access="Read" directaddress="%IX1.3" />
+        <Node name="li_xStBrkTrans2" type="T_BIT_X_4" access="Read" directaddress="%IX1.4" />
+        <Node name="li_xStFanTrans" type="T_BIT_X_2" access="Read" directaddress="%IX1.2" />
+        <Node name="li_xUndCrnLamps" type="T_BIT_X_3" access="Read" directaddress="%IX2.3" />
+        <Node name="lq_xDoorsOpened" type="T_BIT_X_2" access="ReadWrite" directaddress="%QX0.2" />
+        <Node name="lq_xFault" type="T_BIT_X_1" access="ReadWrite" directaddress="%QX0.1" />
+        <Node name="lq_xReadyToWork" type="T_BIT_X_0" access="ReadWrite" directaddress="%QX0.0" />
+        <Node name="wAccel_ATV9xx_UZb" type="T_WORD" access="ReadWrite" directaddress="%QW99" />
+        <Node name="wAccel_ATV9xx_UZm" type="T_WORD" access="ReadWrite" directaddress="%QW3" />
+        <Node name="wAccel_ATV9xx_UZt" type="T_WORD" access="ReadWrite" directaddress="%QW35" />
+        <Node name="wActualVelo_ATV9xx_UZb" type="T_WORD" access="Read" directaddress="%IW105" />
+        <Node name="wActualVelo_ATV9xx_UZm" type="T_WORD" access="Read" directaddress="%IW9" />
+        <Node name="wActualVelo_ATV9xx_UZn" type="T_WORD" access="Read" directaddress="%IW73" />
+        <Node name="wActualVelo_ATV9xx_UZt" type="T_WORD" access="Read" directaddress="%IW41" />
+        <Node name="wContrWr_ATV9xx_UZb" type="T_WORD" access="ReadWrite" directaddress="%QW97" />
+        <Node name="wContrWr_ATV9xx_UZm" type="T_WORD" access="ReadWrite" directaddress="%QW1" />
+        <Node name="wContrWr_ATV9xx_UZn" type="T_WORD" access="ReadWrite" directaddress="%QW65" />
+        <Node name="wContrWr_ATV9xx_UZt" type="T_WORD" access="ReadWrite" directaddress="%QW33" />
+        <Node name="wDecel_ATV9xx_UZb" type="T_WORD" access="ReadWrite" directaddress="%QW100" />
+        <Node name="wDecel_ATV9xx_UZm" type="T_WORD" access="ReadWrite" directaddress="%QW4" />
+        <Node name="wDecel_ATV9xx_UZt" type="T_WORD" access="ReadWrite" directaddress="%QW36" />
+        <Node name="wHoistPuc_ATV9xx_UZn" type="T_WORD" access="Read" directaddress="%IW75" />
+        <Node name="wMotCur_ATV9xx_UZb" type="T_WORD" access="Read" directaddress="%IW106" />
+        <Node name="wMotCur_ATV9xx_UZm" type="T_WORD" access="Read" directaddress="%IW10" />
+        <Node name="wMotCur_ATV9xx_UZn" type="T_WORD" access="Read" directaddress="%IW74" />
+        <Node name="wMotCur_ATV9xx_UZt" type="T_WORD" access="Read" directaddress="%IW42" />
+        <Node name="wSpeedSp_ATV9xx_UZb" type="T_WORD" access="ReadWrite" directaddress="%QW98" />
+        <Node name="wSpeedSp_ATV9xx_UZm" type="T_WORD" access="ReadWrite" directaddress="%QW2" />
+        <Node name="wSpeedSp_ATV9xx_UZn" type="T_WORD" access="ReadWrite" directaddress="%QW66" />
+        <Node name="wSpeedSp_ATV9xx_UZt" type="T_WORD" access="ReadWrite" directaddress="%QW34" />
+        <Node name="wStatWr_ATV9xx_UZb" type="T_WORD" access="Read" directaddress="%IW104" />
+        <Node name="wStatWr_ATV9xx_UZm" type="T_WORD" access="Read" directaddress="%IW8" />
+        <Node name="wStatWr_ATV9xx_UZn" type="T_WORD" access="Read" directaddress="%IW72" />
+        <Node name="wStatWr_ATV9xx_UZt" type="T_WORD" access="Read" directaddress="%IW40" />
+      </Node>
+      <Node name="SLEWING_AXIS">
+        <Node name="Asw" type="T_AntiSwayOpenLoop_2" access="ReadWrite" />
+        <Node name="F_TRIG_AswActive" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="i_iDrvSpdRefAna" type="T_INT" access="ReadWrite" />
+        <Node name="i_rAswSpdEnd" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rAswSpdStrt" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rCblLen" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rCoefFrct" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rSpdLinMax" type="T_REAL" access="ReadWrite" />
+        <Node name="i_wAswAccDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswAccStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswDecDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswDecStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswRampLim" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswTimeEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wBrakDly" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wCalcDistTime" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvDecEmgy" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdSel" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wSmplRate" type="T_WORD" access="ReadWrite" />
+        <Node name="i_xAppOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xAswEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xEnSlw" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xEnSpdFollowSys" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwdSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwdStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xLsPlausibilityOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xQckStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRstOps" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_dwOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="q_iActualVelo" type="T_INT" access="ReadWrite" />
+        <Node name="q_rDistStop" type="T_REAL" access="ReadWrite" />
+        <Node name="q_rOpHrs" type="T_REAL" access="ReadWrite" />
+        <Node name="q_wAcc" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wASAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wDec" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wMotCur" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSIAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSpdRef" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSSAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wStatWr" type="T_WORD" access="ReadWrite" />
+        <Node name="q_xAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xAswActv" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xSpdFollowAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="ScIn" type="T_ScaleInput" access="ReadWrite" />
+        <Node name="SpSel" type="T_SpeedSelect" access="ReadWrite" />
+        <Node name="StaDaSto" type="T_StatisticDataStorage_2" access="ReadWrite" />
+        <Node name="xDrvRunStat" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="TRANSLATION_AXIS">
+        <Node name="Asw" type="T_AntiSwayOpenLoop_2" access="ReadWrite" />
+        <Node name="F_TRIG_AswActive" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="i_iDrvSpdRefAna" type="T_INT" access="ReadWrite" />
+        <Node name="i_rAswSpdEnd" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rAswSpdStrt" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rCblLen" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rCoefFrct" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rSpdLinMax" type="T_REAL" access="ReadWrite" />
+        <Node name="i_wAswAccDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswAccStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswDecDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswDecStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswRampLim" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswTimeEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wBrakDly" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wCalcDistTime" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvDecEmgy" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdSel" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wSmplRate" type="T_WORD" access="ReadWrite" />
+        <Node name="i_xAppOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xAswEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xEnSpdFollowSys" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwdSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwdStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xLsPlausibilityOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xQckStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRstOps" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_dwOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="q_iActualVelo" type="T_INT" access="ReadWrite" />
+        <Node name="q_rDistStop" type="T_REAL" access="ReadWrite" />
+        <Node name="q_rOpHrs" type="T_REAL" access="ReadWrite" />
+        <Node name="q_wAcc" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wASAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wDec" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wMotCur" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSIAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSpdRef" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSSAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wStatWr" type="T_WORD" access="ReadWrite" />
+        <Node name="q_xAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xAswActv" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xSpdFollowAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="ScIn" type="T_ScaleInput" access="ReadWrite" />
+        <Node name="SpSel" type="T_SpeedSelect" access="ReadWrite" />
+        <Node name="StaDaSto" type="T_StatisticDataStorage_2" access="ReadWrite" />
+        <Node name="xDrvRunStat" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="TROLLEY_AXIS">
+        <Node name="Asw" type="T_AntiSwayOpenLoop_2" access="ReadWrite" />
+        <Node name="F_TRIG_AswActive" type="T_F_TRIG" access="ReadWrite" />
+        <Node name="i_iDrvSpdRefAna" type="T_INT" access="ReadWrite" />
+        <Node name="i_rAswSpdEnd" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rAswSpdStrt" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rCblLen" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rCoefFrct" type="T_REAL" access="ReadWrite" />
+        <Node name="i_rSpdLinMax" type="T_REAL" access="ReadWrite" />
+        <Node name="i_wAswAccDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswAccStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswDecDsbl" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswDecStrt" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswRampLim" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wAswTimeEnd" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wBrakDly" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wCalcDistTime" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvDecEmgy" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdHsp" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef1" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef2" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef3" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdRef4" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wDrvSpdSel" type="T_WORD" access="ReadWrite" />
+        <Node name="i_wSmplRate" type="T_WORD" access="ReadWrite" />
+        <Node name="i_xAppOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xAswEn" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xEnSpdFollowSys" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwdSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xFwdStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xLsPlausibilityOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xQckStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevSlow" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRevStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRst" type="T_BOOL" access="ReadWrite" />
+        <Node name="i_xRstOps" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_dwOpNb" type="T_DWORD" access="ReadWrite" />
+        <Node name="q_iActualVelo" type="T_INT" access="ReadWrite" />
+        <Node name="q_rDistStop" type="T_REAL" access="ReadWrite" />
+        <Node name="q_rOpHrs" type="T_REAL" access="ReadWrite" />
+        <Node name="q_wAcc" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wASAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wDec" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wMotCur" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSIAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSpdRef" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wSSAlrmId" type="T_WORD" access="ReadWrite" />
+        <Node name="q_wStatWr" type="T_WORD" access="ReadWrite" />
+        <Node name="q_xAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xAswActv" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvFwd" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xDrvRev" type="T_BOOL" access="ReadWrite" />
+        <Node name="q_xSpdFollowAlrm" type="T_BOOL" access="ReadWrite" />
+        <Node name="ScIn" type="T_ScaleInput" access="ReadWrite" />
+        <Node name="SpSel" type="T_SpeedSelect" access="ReadWrite" />
+        <Node name="StaDaSto" type="T_StatisticDataStorage_2" access="ReadWrite" />
+        <Node name="xDrvRunStat" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
